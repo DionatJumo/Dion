@@ -1,0 +1,10 @@
+provider "aws" {
+  region = "eu-west-1"
+}
+resource "aws_instance" "vm" {
+  ami           = "ami-0acec5a529be6b35a"
+  subnet_id     = "subnet-abc92ad2"
+  instance_type = "t3.micro"
+  tags = {
+    Name = "my-first-tf-node"
+  
